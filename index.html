@@ -1,11 +1,23 @@
 
+
     <!--
     * You can use callback method for success and fail submit form
     * submitSuccess()
     * submitFail()
     -->
-    <div style="width: 100%; display: flex">
-      
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing widget</title>
+        
+        <style>
+          
+        </style>
+
+        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="https://unpkg.com/libphonenumber-js@1.9.50/bundle/libphonenumber-min.js"></script>
@@ -15,7 +27,7 @@
     <link rel="stylesheet" href="https://cdn.superphone.io/widgets/widget.css" />
     <script src="https://cdn.superphone.io/widgets/widget.min.js"></script>
   
-      <script type="text/javascript">
+        <script type="text/javascript">
           window.sp = {
             widgetHash: '9MmvZ9',
             type: 'page',
@@ -27,53 +39,53 @@
           // function formSuccess(result) {
           //   // Custom code FOrm success
           // }
-      </script>
+        </script>
 
-      <style>
-          .page-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-            }
-        
-      </style>
+        <style>
+          body {
+            margin: 0;
+          }
 
-      <style>
-        .phone-input-wrapper .iti__arrow {
-          border-top-color: #000000;
-          border-bottom-color: #000000;
-        }
-      </style>
-
-      <div id="superphone-widget-page-wrapper" class="superphone-widget" style="background-color:rgba(255,255,255,1);font-family:Circular, Arial;">
-        <div id="superphone-widget-title" style="color: #333333">Let Me Be Your Producer!</div>
-        <div id="superphone-widget-description" style="color: #A9A9A9">Add your number here and lets start making music!</div>
-        <form id="addContact" action="#" method="POST" autocomplete="false">
-          <div id="superphone-input-wrapper">
-            <div class="phone-input-wrapper">
-              <input
-                  style="color: #000000; background-color: rgba(242,242,242,1);"
-                  autocomplete="off"
-                  tabindex="4"
-                  type="tel"
-                  class="superphone-form-control"
-                  id="phone"
-                  name="mobile"
-                  placeholder="Mobile # (w/ country code)"
-              >
-            </div>
-            <div class="superphone-send-button">
-              <button style="background: rgba(51,51,51,1); color: #FFFFFF;font-family: Circular, Arial" type="submit" id="submitButton">Send</button>
-            </div>
+          html,
+          body {
+            height: 100%;
+            width: 100%;
+          }
+        </style>
+    </head>
+    <body>
+      <div id="superphone-widget-page" style="background-size:cover;background-repeat:no-repeat;background-image:url(https://cdn.filestackcontent.com/FmwdUw1QuKmAqvMIJFqA);background-color:rgba(255,255,255,1);font-family:Circular, Arial;">
+        <div id="superphone-widget-wrapper">
+          <div id="superphone-widget-landing-wrapper" class="superphone-widget widget-landing" style="background-color: rgba(255,255,255,1);">
+            <div id="superphone-widget-title" style="color: #333333">Let Me Be Your Producer!</div>
+            <div id="superphone-widget-description" style="color: #A9A9A9">Add your number here and lets start making music!</div>
+            <form id="addContact" action="#" method="POST" autocomplete="false">
+              <div id="superphone-input-wrapper">
+                <div class="phone-input-wrapper">
+                  <input
+                      style="color:#000000;background-color:rgba(242,242,242,1)"
+                      autocomplete="off"
+                      tabindex="4"
+                      type="tel"
+                      class="superphone-form-control"
+                      id="phone"
+                      name="mobile"
+                      placeholder="Mobile # (w/ country code)"
+                  >
+                </div>
+                <div class="superphone-send-button">
+                  <button style="background: rgba(51,51,51,1); color: #FFFFFF;font-family: Circular, Arial" type="submit" id="submitButton">Send</button>
+                </div>
+              </div>
+              <div id="form-error-message" class="form-error">
+                <div>Something went wrong. Please check your mobile and try again.</div>
+              </div>
+              <div id="form-error-mobile" class="form-error">
+                Phone number is not valid.
+              </div>
+            </form>
           </div>
-          <div id="form-error-message" class="form-error">
-            <div>Something went wrong. Please check your mobile and try again.</div>
-          </div>
-          <div id="form-error-mobile" class="form-error">
-            Phone number is not valid.
-          </div>
-        </form>
-      </div>
-  </div>
+        </div>
+    </div>
+    </body>
     
